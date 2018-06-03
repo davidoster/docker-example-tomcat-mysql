@@ -5,9 +5,9 @@ db:
     MYSQL_DATABASE: example_db
     MYSQL_USER: example_db_user
     MYSQL_PASSWORD: example_db_pass
-    COMMAND: --character-set-server=utf8 --collation-server=utf8_unicode_ci
-  ports:
-    - "3344:3306"
+    command: --character-set-server=utf8 --collation-server=utf8_unicode_ci
+  #ports:
+  #  - "3344:3306"
   volumes:
    - ./db:/docker-entrypoint-initdb.d
 
@@ -15,7 +15,7 @@ web:
   image: tomcat:latest
   # Environment variables do not appear to be getting loaded the first time Tomcat starts!
   environment:
-    JDBC_URL: jdbc:mysql://ra1.anystream.eu:3344/example_db?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true
+    JDBC_URL: jdbc:mysql://db:3306/example_db?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true
     JDBC_USER: example_db_user
     JDBC_PASS: example_db_pass
   ports:
