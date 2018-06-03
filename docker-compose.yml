@@ -5,7 +5,7 @@ db:
     MYSQL_DATABASE: example_db
     MYSQL_USER: example_db_user
     MYSQL_PASSWORD: example_db_pass
-    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci --init-connect='SET NAMES UTF8;' --innodb-flush-log-at-trx-commit=0
+    command: [mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci --init-connect='SET NAMES UTF8;' --innodb-flush-log-at-trx-commit=0]
   ports:
     - "3344:3306"
   volumes:
