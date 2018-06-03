@@ -38,6 +38,9 @@ private String getResultSet(java.sql.ResultSet resultSet, boolean displayTables)
 	String jdbcUrl = System.getProperty("JDBC_URL");
 	String jdbcUser = System.getProperty("JDBC_USER");
 	String jdbcPass = System.getProperty("JDBC_PASS");
+	out.println(jdbcUrl);
+	out.println(jdbcUser);
+	out.println(jdbcPass);
 
 	java.sql.Connection conn = java.sql.DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcPass);
 	if (conn != null) {
