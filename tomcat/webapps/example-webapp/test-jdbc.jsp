@@ -38,11 +38,15 @@ private String getResultSet(java.sql.ResultSet resultSet, boolean displayTables)
 	String jdbcUrl = System.getProperty("JDBC_URL");
 	String jdbcUser = System.getProperty("JDBC_USER");
 	String jdbcPass = System.getProperty("JDBC_PASS");
+	
+	jdbcUrl = "jdbc:mysql://db:3306/example_db?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true";
+	jdbcUser = "example_db_user";
+	jdbcPass = "example_db_pass";
 	out.println(jdbcUrl);
 	out.println(jdbcUser);
 	out.println(jdbcPass);
 
-	/*java.sql.Connection conn = java.sql.DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcPass);
+	java.sql.Connection conn = java.sql.DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcPass);
 	if (conn != null) {
 		java.sql.Statement stmt = conn.createStatement();
 
@@ -50,6 +54,6 @@ private String getResultSet(java.sql.ResultSet resultSet, boolean displayTables)
 		java.sql.ResultSet rst = stmt.executeQuery(displayTables ? showTables : "select * from " + table);
 		out.println(getResultSet(rst, displayTables));
 		conn.close();
-	}*/
+	}
 
 %></pre></body></html>
