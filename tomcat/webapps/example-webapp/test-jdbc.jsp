@@ -34,14 +34,20 @@ private String getResultSet(java.sql.ResultSet resultSet, boolean displayTables)
 	Class.forName("com.mysql.jdbc.Driver");
 	String showTables = "show tables";
 
-
+	/*
+	DB_ENV_MYSQL_USER=example_db_user
+	DB_ENV_MYSQL_PASSWORD=example_db_pass
+	*/
 	String jdbcUrl = System.getProperty("JDBC_URL");
-	String jdbcUser = System.getProperty("JDBC_USER");
-	String jdbcPass = System.getProperty("JDBC_PASS");
+	String jdbcUser = System.getProperty("DB_ENV_MYSQL_PASSWORD");
+	String jdbcPass = System.getProperty("DB_ENV_MYSQL_PASSWORD");
 	
-	jdbcUrl = "jdbc:mysql://ra1.anystream.eu:3344/example_db?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true";
-	jdbcUser = "example_db_user";
-	jdbcPass = "example_db_pass";
+	//jdbcUrl = "jdbc:mysql://ra1.anystream.eu:3344/example_db?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true";
+	//jdbcUser = "example_db_user";
+	//jdbcPass = "example_db_pass";
+
+	jdbcUrl = "jdbc:mysql://db:3306/example_db?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true";
+
 	out.println(jdbcUrl);
 	out.println(jdbcUser);
 	out.println(jdbcPass);
