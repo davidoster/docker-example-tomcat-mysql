@@ -42,11 +42,11 @@ private String getResultSet(java.sql.ResultSet resultSet, boolean displayTables)
 	String jdbcUser = System.getProperty("DB_ENV_MYSQL_PASSWORD");
 	String jdbcPass = System.getProperty("DB_ENV_MYSQL_PASSWORD");
 	
-	//jdbcUrl = "jdbc:mysql://ra1.anystream.eu:3344/example_db?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true";
+	jdbcUrl = "jdbc:mysql://ra1.anystream.eu:3344/example_db?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true";
 	//jdbcUser = "example_db_user";
 	//jdbcPass = "example_db_pass";
 
-	jdbcUrl = "jdbc:mysql://db:3344/example_db?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true";
+	//jdbcUrl = "jdbc:mysql://db:3344/example_db?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true";
 
 	out.println(jdbcUrl);
 	out.println(jdbcUser);
