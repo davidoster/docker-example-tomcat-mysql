@@ -46,7 +46,7 @@ private String getResultSet(java.sql.ResultSet resultSet, boolean displayTables)
 	out.println(jdbcUser);
 	out.println(jdbcPass);
 
-	java.sql.Connection conn = java.sql.DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcPass);
+	/*java.sql.Connection conn = java.sql.DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcPass);
 	if (conn != null) {
 		java.sql.Statement stmt = conn.createStatement();
 
@@ -54,6 +54,6 @@ private String getResultSet(java.sql.ResultSet resultSet, boolean displayTables)
 		java.sql.ResultSet rst = stmt.executeQuery(displayTables ? showTables : "select * from " + table);
 		out.println(getResultSet(rst, displayTables));
 		conn.close();
-	}
+	}*/
 
 %></pre></body></html>
