@@ -35,16 +35,16 @@ private String getResultSet(java.sql.ResultSet resultSet, boolean displayTables)
 	String showTables = "show tables";
 
 	String jdbcUrl = System.getProperty("JDBC_URL");
-	String jdbcUser = System.getProperty("DB_ENV_MYSQL_PASSWORD");
-	String jdbcPass = System.getProperty("DB_ENV_MYSQL_PASSWORD");
+	String jdbcUser = System.getProperty("JDBC_USER");
+	String jdbcPass = System.getProperty("JDBC_PASS");
 	
-	jdbcUrl = "jdbc:mysql://ra1.anystream.eu:3344/example_db?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true";
+	/*jdbcUrl = "jdbc:mysql://ra1.anystream.eu:3344/example_db?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true";
 	jdbcUser = "example_db_user";
 	jdbcPass = "example_db_pass";
 
 	out.println(jdbcUrl);
 	out.println(jdbcUser);
-	out.println(jdbcPass);
+	out.println(jdbcPass);*/
 
 	java.sql.Connection conn = java.sql.DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcPass);
 	if (conn != null) {
