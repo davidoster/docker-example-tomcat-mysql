@@ -46,7 +46,7 @@ private String getResultSet(java.sql.ResultSet resultSet, boolean displayTables)
 	//jdbcUser = "example_db_user";
 	//jdbcPass = "example_db_pass";
 
-	jdbcUrl = "jdbc:mysql://db:3306/example_db?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true";
+	jdbcUrl = "jdbc:mysql://db:3344/example_db?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true";
 
 	out.println(jdbcUrl);
 	out.println(jdbcUser);
